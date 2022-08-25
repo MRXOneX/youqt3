@@ -1,7 +1,11 @@
+import { ReactNode } from "react";
 import type { NextPage } from "next";
 // layouts
 import PageContainer from "../layouts/PageContainer";
-
+// components 
+import FilterByQuestions from "../components/FilterByQuestions";
+import SearchByQuestions from "../components/SearchByQuestions";
+import QuestionItem from "../components/QuestionItem";
 // type TechnologyCardProps = {
 //   name: string;
 //   description: string;
@@ -9,15 +13,39 @@ import PageContainer from "../layouts/PageContainer";
 // };
 
 const Home: NextPage = () => {
+  
+  const status: string = 'success'
+  const questions: [] = [{}, {}]
+
+
+
 
   return (
     <PageContainer>
-      <div>
-        hi
+      <div className="flex justify-between h-full">
+        <div className="h-full w-[100%] lg:w-[790px]">
+          <SearchByQuestions />
+          <div className="h-full max-w-[630px] mx-auto p-0 sm:pt-[50px]">
+            {status === 'success' && 
+              questions.map((question: any): ReactNode => (
+                <QuestionItem 
+                  key={question.id} 
+                  question={question} 
+                />
+              ))
+            }
+          </div>
+        </div>
+        <div className="h-full w-[490px] hidden lg:block">
+          <FilterByQuestions />
+        </div>
       </div>
     </PageContainer>
   );
 };
+
+
+
 
 // const TechnologyCard = ({
 //   name,

@@ -4,16 +4,19 @@ import { ReactNode } from "react"
 
 type ButtonProps = {
     children: ReactNode
-    onClick: () => void
+    onClick?: () => void
+    className?: string
 }
 
 
 const Button = ({
     children,
-    onClick
+    onClick,
+    className
 }: ButtonProps) => {
     return (
         <button
+            className={className}
             onClick={onClick}
         >
             {children}

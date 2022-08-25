@@ -32,7 +32,7 @@ const PageContainer: NextPage<PageContainerProps> = ({
                 {/* <link rel="icon" href="/favicon.ico" /> */}
             </Head>
             <Navbar />
-            <div className="pt-[80px] pr-[10px] pb-0 pl-[10px] h-full max-w-[1100px] m-auto sm:py-[60px] sm:px-[10px]">
+            <div className="py-[70px] px-[10px] h-full max-w-[1200px] m-auto sm:pt-[80px] sm:px-0">
                 {children}
             </div>
             <NavbarMobile />

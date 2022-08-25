@@ -16,6 +16,7 @@
     "@trpc/next": "^9.27.1",
     "@trpc/react": "^9.27.1",
     "@trpc/server": "^9.27.1",
+    "formik": "^2.2.9",
     "next": "12.2.5",
     "next-auth": "^4.10.3",
     "react": "18.2.0",
@@ -26,6 +27,7 @@
     "zod": "^3.18.0"
   },
   "devDependencies": {
+    "@svgr/webpack": "^6.3.1",
     "@types/node": "18.0.0",
     "@types/react": "18.0.14",
     "@types/react-dom": "18.0.5",
@@ -33,6 +35,7 @@
     "@typescript-eslint/eslint-plugin": "^5.33.0",
     "@typescript-eslint/parser": "^5.33.0",
     "autoprefixer": "^10.4.8",
+    "babel-plugin-inline-react-svg": "^2.0.1",
     "eslint": "8.22.0",
     "eslint-config-next": "12.2.5",
     "postcss": "^8.4.16",
