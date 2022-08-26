@@ -1,6 +1,6 @@
 
 type QuestionQToolbarProps = {
-    questionId: number
+    questionId: number | undefined
 }
 
 

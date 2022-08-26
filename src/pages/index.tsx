@@ -16,18 +16,18 @@ import { trpc } from "../utils/trpc";
 
 const Home: NextPage = () => {
   
-  const questionMutate = trpc.useMutation(['question.getAll'])
+  const questionsMutate = trpc.useMutation(['question.getAll'])
 
 
   useEffect(() => {
     try {
-      questionMutate.mutate()
+      questionsMutate.mutate()
     } catch (error) {
       
     }
   }, [])
 
-  console.log(questionMutate)
+  console.log(questionsMutate)
 
 
   return (
@@ -36,8 +36,8 @@ const Home: NextPage = () => {
         <div className="h-full w-[100%] lg:w-[790px]">
           <SearchByQuestions />
           <div className="h-full max-w-[630px] mx-auto p-0 sm:pt-[50px]">
-            {questionMutate?.status === 'success' && 
-              questionMutate?.data?.map((question: any): ReactNode => (
+            {questionsMutate?.status === 'success' && 
+              questionsMutate?.data?.map((question: any): ReactNode => (
                 <QuestionItem 
                   key={question.id} 
                   question={question} 

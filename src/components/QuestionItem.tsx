@@ -20,7 +20,7 @@ const QuestionItem = ({ question }: QuestionItemProps) => {
             <div className="flex items-center justify-between">
                 <div className="flex items-center">
                     <Avatar
-                        onClick={() => router.push(`/question/${question?.id}`)}
+                        onClick={() => router.push(`/profile/${question?.authorId}`)}
                         width={35}
                         height={35}
                         src={question?.author?.image}
@@ -59,8 +59,7 @@ const QuestionItem = ({ question }: QuestionItemProps) => {
                     }}
                     className="text-[16px] sm:text-[18px] leading-[22px] hover:underline"
                 >
-                    {question?.text}На шахматной доске 25×36 королю разрешено ходить вправо, вверх, вправо-вверх по диагонали или вправо-вниз по диагонали.
-                    Чтобы доказать, что он может сделать лишь конечное число ходов, можно рассмотреть полуинвариант. Пронумеруем столбцы слева направо, а строки — снизу вверх. Что из нижеперечисленного является полуинвариантом процесса? 1) номер столбца, где находится король; 2) номер строки, где находится король; 3) сумма номеров столбца и строки, где находится король; 4) сумма удвоенного номера строки и номера столбца, где находится король; 5) сумма номера строки и удвоенного номера столбца, где находится король. Какое наибольшее число ходов король может сделать, если начинает из нижнего левого угла?
+                    {question?.text}
                 </p>
             </div>
             <div className="flex items-end justify-between">

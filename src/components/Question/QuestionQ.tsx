@@ -3,6 +3,7 @@ import { memo, useMemo } from "react"
 import QuestionQAComment from "./QuestionQAComment"
 // components/UI
 import Avatar from '../UI/Avatar'
+import { useRouter } from "next/router"
 
 
 type QuestionQProps = {
@@ -13,6 +14,8 @@ type QuestionQProps = {
 const QuestionQ = ({
     question
 }: QuestionQProps) => {
+
+    const router = useRouter()
 
 
     const comments = useMemo(() => {
@@ -35,9 +38,11 @@ const QuestionQ = ({
             <div className="flex items-center justify-between">
                 <div className="flex">
                     <Avatar
+                        onClick={() => router.push(`/profile/${question.authorId}`)}
                         src={question?.author?.image}
                         height={35}
                         width={35}
+                        className="cursor-pointer"
                     />
                     <div className="ml-[10px] font-montserrat flex flex-col justify-center leading-[16px] text-[15px] sm:text-[16px]">
                         <span className="text-[#232323] font-semibold">
