@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import type { NextPage } from "next";
 // layouts
 import PageContainer from "../layouts/PageContainer";
@@ -6,6 +6,8 @@ import PageContainer from "../layouts/PageContainer";
 import FilterByQuestions from "../components/FilterByQuestions";
 import SearchByQuestions from "../components/SearchByQuestions";
 import QuestionItem from "../components/QuestionItem";
+//
+import { trpc } from "../utils/trpc";
 // type TechnologyCardProps = {
 //   name: string;
 //   description: string;
@@ -14,10 +16,18 @@ import QuestionItem from "../components/QuestionItem";
 
 const Home: NextPage = () => {
   
-  const status: string = 'success'
-  const questions: [] = [{}, {}]
+  const questionMutate = trpc.useMutation(['question.getAll'])
 
 
+  useEffect(() => {
+    try {
+      questionMutate.mutate()
+    } catch (error) {
+      
+    }
+  }, [])
+
+  console.log(questionMutate)
 
 
   return (
@@ -26,8 +36,8 @@ const Home: NextPage = () => {
         <div className="h-full w-[100%] lg:w-[790px]">
           <SearchByQuestions />
           <div className="h-full max-w-[630px] mx-auto p-0 sm:pt-[50px]">
-            {status === 'success' && 
-              questions.map((question: any): ReactNode => (
+            {questionMutate?.status === 'success' && 
+              questionMutate?.data?.map((question: any): ReactNode => (
                 <QuestionItem 
                   key={question.id} 
                   question={question} 

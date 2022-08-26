@@ -1,9 +1,15 @@
 //
 import Link from "next/link"
+import { useRouter } from "next/router"
 
 const Navbar = () => {
 
+    const router = useRouter()
 
+
+    const handleSignIn = () => {
+        router.push('/auth')
+    }
 
     const handleSignOut = async () => {
         try {
@@ -20,6 +26,12 @@ const Navbar = () => {
                     YouQ
                 </Link>
             </span>
+            <button
+                onClick={handleSignIn}
+                className="bg-[#4971FF] hidden sm:block border-none cursor-pointer rounded-[17px] hover:bg-[#2851E4] font-bold font-nunito text-[20px] text-white h-auto py-[5px] px-[17px]"
+            >
+                Войти
+            </button>
         </div>
     )
 }
