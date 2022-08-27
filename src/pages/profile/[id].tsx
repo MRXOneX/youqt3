@@ -14,7 +14,7 @@ const Profile: NextPage = (props) => {
             <div className="flex justify-between h-full">
                 <div className="h-full w-[100%] lg:w-[490px]">
                     <div className="max-w-[630px] lg:max-w-[330px] mx-auto h-full">
-                        <ProfileInfo profile="" />
+                        <ProfileInfo profile={null} />
                     </div>
                 </div>
                 <div className="h-full w-[790px] hidden lg:block">

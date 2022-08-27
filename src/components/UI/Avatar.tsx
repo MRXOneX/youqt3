@@ -3,7 +3,7 @@ import Image from "next/image"
 
 
 type AvatarProps = {
-    src: string
+    src: string | undefined
     width?: number
     height?: number
     className?: string
@@ -11,7 +11,7 @@ type AvatarProps = {
 }
 
 const Avatar = ({
-    src = 'https://s3.timeweb.com/cg16553-youq/avatar.svg',
+    src,
     width = 20,
     height = 20,
 

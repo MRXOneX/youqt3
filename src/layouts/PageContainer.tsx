@@ -29,7 +29,7 @@ const PageContainer: NextPage<PageContainerProps> = ({
                 <title>{title}</title>
                 <meta name="title" content={title} />
                 <meta name="description" content={description} />
-                {/* <link rel="icon" href="/favicon.ico" /> */}
+                <link rel="icon" href="/logo.svg" />
             </Head>
             <Navbar />
             <div className="py-[70px] px-[10px] h-full max-w-[1200px] m-auto sm:pt-[80px] sm:px-0">
