@@ -6,11 +6,37 @@
 @tailwind utilities;
 
 
-html,body,#__next {
+html,
+body,
+#__next {
     height: 100%;
 }
 
 body {
     background: #F1F6FF;
     /* e4e4e7 */
+}
+
+
+div.DraftEditor-root {
+    height: 100%;
+    width: 100%;
+
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+div.DraftEditor-editorContainer,
+div.public-DraftEditor-content {
+    height: 100%;
+
+    font-family: sans-serif;
+}
+
+
+@media screen and (max-width: 620px) {
+    div.DraftEditor-root {
+        font-size: 16px;
+    }
 }

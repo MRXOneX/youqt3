@@ -21,7 +21,9 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     try {
-      questionsMutate.mutate()
+      questionsMutate.mutate({
+        limit: 10
+      })
     } catch (error) {
       
     }

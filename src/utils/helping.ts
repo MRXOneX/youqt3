@@ -1,4 +1,6 @@
-export const itemsOptions = [
+
+// options
+export const itemsOptions: any = [
     { value: 'all', label: 'Все' },
     { value: 'mathematics', label: 'Математика' },
     { value: 'literature', label: 'Литература' },
@@ -23,7 +25,7 @@ export const itemsOptions = [
     { value: 'astronomy', label: 'Астрономия' },
     { value: 'physical_culture', label: 'Физкультура и спорт' }
 ]
-export const itemsOptionsObject = {
+export const itemsOptionsObject: any = {
     all: 'Все',
     mathematics: 'Математика',
     literature: 'Литература',
@@ -51,17 +53,33 @@ export const itemsOptionsObject = {
 
 
 
-export const classesOptions = [
+export const classesOptions: any = [
     { value: 'all', label: 'Все класс' },
     { value: 'junior', label: '1 - 4 классы' },
     { value: 'middle', label: '5 - 9 классы' },
     { value: 'senior', label: '9 - 11 классы' },
     { value: 'college', label: 'Студенческий' }
 ]
-export const classesOptionsObject = {
+export const classesOptionsObject: any = {
     all: 'Все класс',
     junior: '1 - 4 классы',
     middle: '5 - 9 классы',
     senior: '9 - 11 классы',
     college: 'Студенческий'
+}
+
+
+// level    
+export const level: any = {
+    beginner: 'Новичок'
+}
+
+
+
+// role 
+export const role: any = {
+    student: 'Ученик',
+    teacher: 'Учитель',
+    parent: 'Родитель',
+    other: 'Другое'
 }

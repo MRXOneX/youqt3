@@ -6,6 +6,8 @@ import { useRouter } from "next/router"
 import Avatar from "./UI/Avatar"
 import Button from "./UI/Button"
 import useOutside from "../hooks/useOutside"
+// utils/svg
+// import Plus from '../utils/svg/plus.svg'
 
 
 
@@ -38,6 +40,9 @@ const Navbar = ({ session }: any) => {
                     YouQ
                 </Link>
             </span>
+            {/* <button>
+                <Plus fill="white" width={28} height={28}  />
+            </button> */}
             {session?.status === 'authenticated' ? (
                 <div ref={ref} className="relative">
                     <div

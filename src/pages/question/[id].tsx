@@ -10,6 +10,7 @@ import QuestionQToolbar from "../../components/Question/QuestionQToolbar"
 import PageContainer from "../../layouts/PageContainer"
 // utils
 import { trpc } from "../../utils/trpc"
+import QuestionsNew from "../../components/Question/QuestionsNew"
 
 
 
@@ -21,7 +22,6 @@ const Question: NextPage = () => {
 
     const questionMutate = trpc.useMutation(['question.getOne'])
 
-    console.log(questionMutate)
 
     const id: number | undefined = Number(router?.query?.id)
     const input = {
@@ -62,7 +62,9 @@ const Question: NextPage = () => {
                     </div>
                 </div>
                 <div className="h-full w-[490px] hidden lg:block">
-
+                    <div className="max-w-[330px] mx-auto">
+                        <QuestionsNew />
+                    </div>
                 </div>
             </div>
         </PageContainer>
